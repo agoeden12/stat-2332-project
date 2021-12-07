@@ -173,7 +173,7 @@ def sim(n):
     X=np.random.binomial(20,.7,n)
     U=np.random.uniform(15,30,n)
     N=np.random.normal(0,5,n)
-    E=np.random.uniform(-1,-1,n)
+    E=np.random.uniform(-1,1,n)
 
     y= 50 + 10*X + 20*U + 100*N + E
     y1=pd.DataFrame(y)
@@ -211,7 +211,7 @@ printQuestion()
 for x in range(1,6):
     y = x + 1
     z = x + 2
-    dividend = (np.e ** x)-np.log(z**z)
+    dividend = (np.e ** x)-np.log10(z**z)
     divisor = (5+y)
     result = dividend / divisor
     print(result)
@@ -251,7 +251,7 @@ for num in x:
     if (num < 0):
         y.append((2*(num**2)) + np.e**num + 3)
     elif (num >= 0 or num < 10):
-        y.append((9*num) + np.log(20))
+        y.append((9*num) + np.log10(20))
     else:
         y.append((7*(num**2)) + (5*num) - 17)
 
@@ -268,7 +268,7 @@ for x in range(10,20):
 printQuestion()
 result = 0
 for x in range(2, 10001):
-    result += (1/np.log(x))
+    result += (1/np.log10(x))
 print(result)
 
 # Question #41:
